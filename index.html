@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmthy</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="index/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="index/favicon-16.png">
+    <link rel="icon" type="image/x-icon" href="index/favicon-32.ico">
+    <link rel="shortcut icon" href="index/favicon-32.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="grain-overlay">
+        <header id="main-header" class="nav-hidden">
+            <nav>
+                <div class="nav-group-1">
+                    <div id="logo"><a href="#"><img src="works/logo.svg" /></a></div>
+                    <div><a href="#" class="link">home</a></div>
+                </div>
+                <div class="nav-group-2">
+                    <div id="home"><a href="works.html" class="link">works</a></div>
+                    <div id="about"><a href="info.html" class="link">about</a></div>
+                </div>
+                <div id="nav-res-icon">
+                    <img src="nav-res-icon.svg" />
+                </div>
+
+            </nav>
+
+        </header>
+        <div id="overlay"></div>
+        <div id="nav-res-menu">
+            <div id="home-res"><a href="works.html" class="link">works</a></div>
+            <div id="about-res"><a href="info.html" class="link">about</a></div>
+        </div>
+        
+        <main>
+            <section id="section-1">
+                <div id="frame-home">
+                    <div><img src="index/frame-home.svg" /></div>
+                    <div id="logo-big"><img src="index/logo-big.svg" /></div>
+                    <div id="portfolio-text-wrapper">
+                        <div class="portfolio-text-slide portfolio-text-top"><img src="index/portfolio-text.svg"
+                                alt="Portfolio Text" /></div>
+                        <div class="portfolio-text-slide portfolio-text-bottom"><img src="index/portfolio-text.svg"
+                                alt="Portfolio Text" /></div>
+                    </div>
+                    <div id="two-elephants">
+                        <img id="elephant-1" src="index/elephant.svg" />
+                        <img id="elephant-2" src="index/elephant-2.svg" />
+                    </div>
+                    <div id="icons">
+                        <div id="about-icon-home"><a href="info.html" class="link"><img
+                                    src="index/about-icon-home.svg" /></a></div>
+                        <div id="works-icon-home"><a href="works.html" class="link"><img
+                                    src="index/works-icon-home.svg" /></a></div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-2">
+                <div id="elements">
+                    <div id="circles">
+                        <img id="hi" src="index/hi.svg" />
+                        <img id="ball-1" src="index/ball-1.svg" />
+                        <img id="ball-2" src="index/ball-2.svg" />
+                        <img id="im" src="index/i'm.svg" />
+                        <img id="thy" src="index/thy.svg" />
+                        <img id="cm" src="index/cm.svg" />
+                        <img id="question" src="index/question.svg" />
+                        <img id="ball-3" src="index/ball-3.svg" />
+                        <img id="huh" src="index/!.svg" />
+                        <img id="creative" src="index/creative.svg" />
+                        <img id="ball-4" src="index/ball-4.svg" />
+                        <img id="practitioner" src="index/practitioner.svg" />
+                        <img id="fun" src="index/fun.svg" />
+                        <img id="ball-5" src="index/ball-5.svg" />
+
+                    </div>
+                    <div id="explore-frame">
+                        <div id="combine">
+
+                            <img src="index/explore-text.svg" />
+                            <a href="works.html" class="link">
+                                <div class="slide-up"
+                                    style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%)">
+                                    <!-- Layer 1 -->
+                                    <div class="text top">EXPLORE MY <span>WORKS</span></div>
+
+                                    <!-- Layer 2 -->
+                                    <div class="text bottom">EXPLORE MY <span>WORKS</span></div>
+                                </div>
+                            </a>
+                            <div id="hat-container">
+                                <img id="hat" src="index/hat.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/sarathsaleem/grained/grained.min.js"></script>
+    <script>
+        const options = {
+            animate: true,
+            patternWidth: 200,
+            patternHeight: 200,
+            grainOpacity: 0.08,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        };
+        grained('#grain-overlay', options);
+    </script>
+    <!-- Your JS -->
+    <script src="index.js"></script>
+
+</body>
+
+</html>

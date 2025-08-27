@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmthy</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="index/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="index/favicon-16.png">
+    <link rel="icon" type="image/x-icon" href="index/favicon-32.ico">
+    <link rel="shortcut icon" href="index/favicon-32.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module" crossorigin="" src="/assets/index-Beu9lz7A.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-Dt5X_R2B.css">
+    <link rel="stylesheet" href="stuff.css">
+
+</head>
+
+<body>
+    <div id="grain-overlay">
+        <img id="element-1" src="works/star.svg" />
+        <img id="element-2" src="works/yellow-banana.svg">
+        <img id="element-3" src="works/star-2.svg" />
+        <img id="element-4" src="works/element-4.svg" />
+        <img id="element-5" src="works/element-5.svg" />
+        <img id="element-6" src="works/logo.svg" />
+        <div class="stuff-images">
+            <div class="headline"><img src="images/stuff-1.PNG" /></div>
+            <div class="headline"><img src="images/stuff-2.PNG" /></div>
+            <div class="headline"><img src="images/stuff-3.PNG" /></div>
+            <div class="headline"><img src="images/stuff-4.JPG" /></div>
+            <div class="headline"><img src="images/stuff-5.PNG" /></div>
+            <div class="headline"><img src="images/stuff-6.PNG" /></div>
+            <div class="headline"><img src="images/stuff-7.PNG" /></div>
+            <div class="headline"><img src="images/stuff-8.PNG" /></div>
+            <div class="headline"><img src="images/stuff-9.PNG" /></div>
+            <div class="headline"><img src="images/stuff-10.PNG" /></div>
+            <div class="headline"><img src="images/stuff-11.PNG" /></div>
+            <div class="headline"><img src="images/stuff-12.PNG" /></div>
+            <div class="headline"><img src="images/stuff-13.PNG" /></div>
+            <div class="headline"><img src="images/stuff-14.PNG" /></div>
+
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="stuff.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/sarathsaleem/grained/grained.min.js"></script>
+    <script>
+        const options = {
+            animate: true,
+            patternWidth: 200,
+            patternHeight: 200,
+            grainOpacity: 0.08,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        };
+        grained('#grain-overlay', options);
+    </script>
+    <script>
+        ScrollReveal().reveal('.headline');
+    </script>
+</body>
+
+</html>

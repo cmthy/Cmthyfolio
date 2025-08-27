@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cmthy</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="index/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="index/favicon-16.png">
+  <link rel="icon" type="image/x-icon" href="index/favicon-32.ico">
+  <link rel="shortcut icon" href="index/favicon-32.ico">
+  <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pxj4yiv.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- GSAP ScrollTrigger Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <link rel="stylesheet" href="info.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-group-1">
+        <div><a href="#"><img src="works/logo.svg" id="logo" /></a></div>
+        <div><a href="#" class="link">about</a></div>
+      </div>
+      <div class="nav-group-2">
+        <div id="home"><a href="index.html" class="link">home</a></div>
+        <div id="about"><a href="works.html" class="link">works</a></div>
+      </div>
+      <div id="nav-res-icon">
+        <img src="nav-res-icon.svg" />
+      </div>
+    </nav>
+  </header>
+  <div id="overlay"></div>
+  <div id="nav-res-menu">
+    <div id="home-res"><a href="index.html" class="link">home</a></div>
+    <div id="about-res"><a href="works.html" class="link">works</a></div>
+  </div>
+  <main>
+    <div class="grid-box" id="grain-overlay">
+      <section id="section1">
+        <div id="face">
+          <div>
+            <div id="fr-face">
+              <img id="frame" src="info/frame.svg" />
+              <img id="frame-face" src="info/face.svg" />
+            </div>
+            <div id="self-video">
+              <video src="self-video.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <img id="tag" src="info/tag.svg" />
+          </div>
+        </div>
+        <div id="info">
+          <div class="info-box">
+            <h1>Hi, I'm Thy</h1>
+            <p class="split">I see myself as a creative practitioner still learning and growing, dedicated to creating
+              for joy and for
+              better design. If the world was ending, you’d probably find me peacefully lying next to my unfinished
+              projects.</p>
+          </div>
+          <div class="info-box">
+            <h1>Education</h1>
+            <p class="split">RMIT University Vietnam Bachelor of Design (Digital Media)</p>
+            <p class="split">[2024–now]</p>
+
+          </div>
+          <div class="info-box">
+            <h1>Skills</h1>
+            <div id="grid-box-skill">
+              <img style="margin-left: var(--space-2)" src="info/Adobe After Effects.svg" />
+              <img src="info/Adobe Illustrator.svg" />
+              <img src="info/Adobe Photoshop.svg" />
+              <img src="info/Adobe Indesign.svg" />
+              <img src="info/DaVinci Resolve.svg" />
+              <img src="info/Figma.svg" />
+              <img src="info/Blender.svg" />
+              <img style="margin-right: var(--space-3)" src="info/Visual Studio.svg" />
+            </div>
+          </div>
+
+        </div>
+        <img src="info/contact.svg" id="contact" />
+
+      </section>
+      <div id="overlay-2"></div>
+      <div id="contact-info">
+        <div id="scale">
+          <img id="contact-frame" src="info/contact-frame.svg" />
+          <img src="info/nothing-2.svg"
+            style="position: absolute; top:20%; left:50%; transform: translate(-50%, -50%)" />
+          <img src="info/let.svg" style="position: absolute; top:50%; left:50%; transform: translate(-50%, -50%)" />
+          <img src="info/yeah.svg" style="position: absolute; top:65%; left:50%; transform: translate(-50%, -50%)" />
+          <img src="info/ball.svg" style="position: absolute; top:30%; left:50%; transform: translate(-50%, -50%)" />
+          <div
+            style="position: absolute; top:67%; left:50%; transform: translate(-50%, -50%); width: 150px; height: 3px; border: 1px solid var(--color-black); background-color: var(--color-accent-red)">
+          </div>
+          <div id="text-info" style="position: absolute; top:80%; left:50%; transform: translate(-50%, -50%)">
+            <div id="text-1"><a href="mailto:thisisthycm.thy@gmail.com" target="_blank">thisismecm.thy@gmail.com</a>
+            </div>
+            <div id="text-2"><a href="https://www.behance.net/thyvocam" target="_blank">Behance</a></div>
+            <div id="text-3"><a
+                href="https://www.instagram.com/asdfghjkl.zxcvbnm.quertyuiop?igsh=dWU2MWJwcDU1bnNk&utm_source=qr"
+                target="_blank">Instagram</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+
+  <script src="info.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/sarathsaleem/grained/grained.min.js"></script>
+  <script>
+    const options = {
+      animate: true,
+      patternWidth: 200,
+      patternHeight: 200,
+      grainOpacity: 0.08,
+      grainDensity: 1,
+      grainWidth: 1,
+      grainHeight: 1
+    };
+    grained('#grain-overlay', options);
+  </script>
+
+</body>
+
+</html>

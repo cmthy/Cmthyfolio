@@ -1,0 +1,786 @@
+:root {
+    /* Base colors */
+    --color-white: #FAEED5;
+    --color-black: #130000;
+
+    /* Neutral scale */
+    --color-gray-100: #f8f9fa;
+    --color-gray-200: #e9ecef;
+    --color-gray-300: #dee2e6;
+    --color-gray-400: #ced4da;
+    --color-gray-500: #adb5bd;
+    --color-gray-600: #6c757d;
+    --color-gray-700: #495057;
+    --color-gray-800: #343a40;
+    --color-gray-900: #212529;
+
+    /* Brand colors */
+    --color-primary-yellow: #F8B733;
+    --color-primary-orange: #F98D36;
+    --color-accent-red: #F43430;
+    --color-accent-blue: #025A8B;
+
+    /* Semantic colors */
+
+    --color-red-orange: #EE5229;
+    --color-light-blue: #00A8D0;
+    --color-light-brown: #907044;
+    --color-warm-grey: #907765;
+    --color-dark-grey: #414042;
+
+
+    /* Gradients */
+    --gradient-primary-1: linear-gradient(0deg, #F98D36, #F8B733);
+    --gradient-primary-2: linear-gradient(180deg, #F98D36, #F8B733);
+    --gradient-accent: radial-gradient(circle at center, #faeed5 0%, #f9edd3 46%, #f9ebcc 63%, #f9e7c0 74%, #f9e1af 84%, #f9da99 92%, #f9d27f 99%, #f9d17c 100%);
+
+    /* ===== 📝 Typography ===== */
+    --font-family-title: "zebrawood-std-fill", sans-serif;
+    --font-family-text: "Scrivano", serif;
+
+    /* Font sizes (relative scale) */
+    --fs-xs: 0.75rem;
+    /* 12px */
+    --fs-sm: 0.875rem;
+    /* 14px */
+    --fs-base: 1rem;
+    /* 16px */
+    --fs-lg: 1.125rem;
+    /* 18px */
+    --fs-xl: 1.25rem;
+    /* 20px */
+    --fs-2xl: 1.5rem;
+    /* 24px */
+    --fs-3xl: 1.875rem;
+    /* 30px */
+    --fs-4xl: 2.25rem;
+    /* 36px */
+
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Line heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-loose: 1.75;
+
+    /* ===== 📏 Spacing ===== */
+    --space-0: 0;
+    --space-1: 0.25rem;
+    /* 4px */
+    --space-2: 0.5rem;
+    /* 8px */
+    --space-3: 0.75rem;
+    /* 12px */
+    --space-4: 1rem;
+    /* 16px */
+    --space-5: 1.25rem;
+    /* 20px */
+    --space-6: 1.5rem;
+    /* 24px */
+    --space-8: 2rem;
+    /* 32px */
+    --space-10: 2.5rem;
+    /* 40px */
+    --space-12: 3rem;
+    /* 48px */
+
+    /* ===== 📐 Borders & Radius ===== */
+    --border-radius-sm: 0.25rem;
+    /* 4px */
+    --border-radius-md: 0.5rem;
+    /* 8px */
+    --border-radius-lg: 1rem;
+    /* 16px */
+    --border-radius-full: 9999px;
+    /* pill/circle */
+
+    /* Border widths */
+    --border-width-thin: 1px;
+    --border-width-thick: 2px;
+
+    /* ===== 🌑 Shadows ===== */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+
+    /* ===== ⏱ Animation ===== */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 300ms ease-in-out;
+    --transition-slow: 500ms ease-in-out;
+    --scroll-progress: 0;
+}
+
+html {
+    /*reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    background-image: var(--gradient-primary-1);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: start;
+    /* canh dọc */
+    margin: 0;
+    gap: 0;
+}
+
+#grain-overlay {
+    position: fixed;
+    inset: 0;
+}
+
+/*----------------NAV BAR-----------------------*/
+a {
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    color: inherit;
+    /* Dùng màu chữ giống phần tử cha */
+}
+
+
+h1 {
+    font-family: var(--font-family-title);
+    font-size: var(--fs-2xl);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    background-image: var(--gradient-primary-1);
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-1) var(--space-4);
+    color: var(--color-black);
+    font-family: var(--font-family-title);
+    font-size: var(--fs-xl);
+    border-bottom: 2px solid var(--color-black);
+    margin-bottom: 0;
+    z-index: 9999;
+}
+
+/* Styling for the first group of nav items */
+.nav-group-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-group-1 div {
+    text-decoration-line: underline;
+    text-underline-offset: var(--space-1);
+    cursor: pointer;
+}
+
+/* Styling for the second group of nav items */
+.nav-group-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-right: var(--space-10);
+}
+
+.nav-group-2 div {
+    position: relative;
+    cursor: pointer;
+    padding: var(--space-2) var(--space-4);
+    /* Hide any overflow from the pseudo-element to prevent issues */
+    overflow: hidden;
+    /* Set a transition for the text color to make it smooth */
+    transition: color 0.5s ease-in-out;
+    /* Ensure the text is visible on top of the background */
+    z-index: 1;
+    margin-bottom: 0;
+    border-top-left-radius: var(--space-3);
+    border-top-right-radius: var(--space-3);
+}
+
+/* On hover, change the text color to white */
+.nav-group-2 div:hover {
+    color: var(--color-white);
+}
+
+
+.nav-group-2 div::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-black);
+    /* Make the pseudo-element appear behind the text */
+    z-index: -1;
+    /* Add a transition to the width for a smooth slide-in effect */
+    transition: height 0.5s ease-in-out;
+}
+
+/* On hover, increase the width of the pseudo-element to 100% */
+.nav-group-2 div:hover::before {
+    height: 100%;
+}
+
+#logo {
+    margin-right: var(--space-3);
+    margin-left: var(--space-3);
+    animation-name: logo-anim;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    transition: transform 0.1s linear;
+}
+
+@keyframes logo-anim {
+    from {
+        transform: scale(1.2) rotate(-360deg);
+    }
+
+    to {
+        transform: scale(1) rotate(0);
+    }
+}
+
+.nav-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark semi-transparent color */
+    display: none;
+    /* Initially hidden */
+    z-index: 100;
+    /* Below the popup but above everything else */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+
+}
+
+#nav-res-menu {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    gap: var(--space-6);
+    color: var(--color-white);
+    font-family: var(--font-family-title);
+    font-size: var(--fs-4xl);
+    z-index: 101;
+    text-decoration-line: underline;
+    text-underline-offset: var(--space-5);
+    cursor: pointer;
+}
+
+#nav-res-menu div {
+    padding: var(--space-6);
+}
+#nav-res-icon {
+    display: none;
+    margin: var(--space-3);
+    margin-right: 10%;
+    transform-origin: center;
+}
+
+/*-----------------------------------------------*/
+
+h2 {
+    font-family: "zebrawood-std-fill", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--fs-3xl);
+}
+
+#section-1 {
+    /*background-image: var(--gradient-primary-1);*/
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    /* chiều cao toàn màn hình */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* canh ngang */
+    align-items: center;
+    /* canh dọc */
+    margin-top: 0%;
+
+}
+
+#frame-home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* canh ngang */
+    align-items: center;
+    /* canh dọc */
+    margin-top: 1%;
+
+}
+
+#logo-big {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#portfolio-text-wrapper {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    overflow: hidden;
+    line-height: .9;
+}
+
+/* The two text elements inside the wrapper */
+.portfolio-text-slide {
+    display: block;
+    transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+    will-change: transform;
+}
+
+/* The top text starts visible and will slide up */
+.portfolio-text-top {
+    transform: translateY(0);
+}
+
+/* The bottom text is initially hidden and will slide up to take its place */
+.portfolio-text-bottom {
+    position: absolute;
+    inset: 0;
+    transform: translateY(110%);
+    /* Start below the top element */
+}
+
+/*
+ * Final state when .animate-home class is added.
+ * The element becomes visible (opacity: 1) and moves to its original position (translateY(0)).
+ */
+.animate-home .portfolio-text-top {
+    transform: translateY(-110%);
+}
+
+.animate-home .portfolio-text-bottom {
+    transform: translateY(0);
+}
+
+#two-elephants {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* canh ngang */
+    align-items: center;
+    /* canh dọc */
+    animation-name: elephants-anim;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+#two-elephants {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+#elephant-1 {
+    transform: translateX(-80%);
+}
+
+#elephant-2 {
+    transform: translateX(80%);
+}
+
+/* Animations for elephant-1 */
+@keyframes elephant-1-in {
+    from {
+        transform: translateX(-80%);
+    }
+
+    to {
+        transform: translateX(-150%);
+    }
+}
+
+@keyframes elephant-1-out {
+    from {
+        transform: translateX(-150%);
+    }
+
+    to {
+        transform: translateX(-80%);
+    }
+}
+
+/* elephant-2 animations */
+@keyframes elephant-2-in {
+    from {
+        transform: translateX(80%);
+    }
+
+    to {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes elephant-2-out {
+    from {
+        transform: translateX(150%);
+    }
+
+    to {
+        transform: translateX(80%);
+    }
+}
+
+/* classes */
+.in-elephant-1 {
+    animation: elephant-1-in 1s ease-in-out forwards;
+}
+
+.out-elephant-1 {
+    animation: elephant-1-out 1s ease-in-out forwards;
+}
+
+.in-elephant-2 {
+    animation: elephant-2-in 1s ease-in-out forwards;
+}
+
+.out-elephant-2 {
+    animation: elephant-2-out 1s ease-in-out forwards;
+}
+
+#icons {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#icons div {
+    margin: 230%;
+}
+
+#works-icon-home {
+    transform: scale(0.8);
+}
+
+#about-icon-home {
+    padding-left: 3%;
+    transform: scale(0.8);
+}
+
+#section-2 {
+    width: 100vw;
+    height: 140vh;
+    margin: 0;
+    margin-top: 0%;
+    overflow-y: hidden;
+}
+
+#elements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+#hat {
+    margin: 3%;
+    transform: scale(0.5);
+}
+
+#hat-container {
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+#combine:hover #hat-container {
+    opacity: 1;
+}
+
+#circles {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    cursor: pointer;
+
+
+}
+
+#circles img {
+    margin: 3%;
+    position: absolute;
+    cursor: pointer;
+    will-change: transform;
+    /* Optimize for CSS transforms */
+    transition: transform 0.1s linear;
+    /* Smooths out the repulsion effect */
+}
+
+
+
+
+
+.slide-up {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    line-height: .9;
+}
+
+.slide-up .text {
+    display: block;
+    font-family: var(--font-family-title);
+    font-size: var(--fs-3xl);
+    transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+    will-change: transform
+}
+
+.slide-up .top {
+    transform: translateY(0)
+}
+
+.slide-up .bottom {
+    position: absolute;
+    inset: 0;
+    transform: translateY(100%)
+}
+
+.slide-up:hover .top {
+    transform: translateY(-110%)
+}
+
+.slide-up:hover .bottom {
+    transform: translateY(0)
+}
+
+
+#circles {
+    transform: translateY(200%);
+    /* Starts below the screen */
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    will-change: transform, opacity;
+}
+
+/* Initial state of the explore-frame */
+#explore-frame {
+    position: relative;
+    transform: translateY(200%);
+    /* Starts below the screen */
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+    will-change: transform, opacity;
+}
+
+/* The classes added by JavaScript to trigger the animations */
+.animate-circles {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.animate-explore {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+/* ---------------RESPONSIVE-------------- */
+@media (max-width: 640px) {
+
+    /* Mobile */
+    #nav-res-icon {
+        display: block;
+    }
+
+    .nav-group-2 {
+        display: none;
+    }
+
+    nav {
+        background-image: none;
+        border: none;
+    }
+    .nav-hidden {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    #hat-container {
+        opacity: 1;
+    }
+
+    #combine {
+        transform: scale(0.7);
+    }
+
+    #hi,
+    #ball-1,
+    #ball-2,
+    #im,
+    #thy,
+    #cm,
+    #question,
+    #ball-3,
+    #huh,
+    #ball-4,
+    #fun,
+    #ball-5 {
+        width: 15vw;
+    }
+
+    #practitioner,
+    #creative {
+        width: 35vw;
+    }
+
+    #circles {
+        padding-top: 20%;
+    }
+
+    #section-2 {
+        height: 130vh;
+    }
+
+    #frame-home {
+        margin-top: -5%;
+        transform: scale(0.8);
+    }
+
+    #portfolio-text-wrapper {
+        margin-top: 5%;
+    }
+
+    #portfolio-text-wrapper img {
+        width: 90vw;
+    }
+
+    
+
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+
+    /* Tablet */
+    #frame-home {
+        margin-top: -7%;
+        transform: scale(clamp(0.3, 0.5, 0.8));
+    }
+
+    #hat-container {
+        opacity: 1;
+    }
+
+    #combine {
+        transform: scale(0.7);
+    }
+
+    #hi,
+    #ball-1,
+    #ball-2,
+    #im,
+    #thy,
+    #cm,
+    #question,
+    #ball-3,
+    #huh,
+    #ball-4,
+    #fun,
+    #ball-5 {
+        width: 8vw;
+    }
+
+    #practitioner {
+        width: 18vw;
+    }
+
+    #creative {
+        width: 12vw;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    /* Laptop */
+    #frame-home {
+       transform: scale(clamp(0.8, 0.9, 1));
+    }
+}
+@media (min-width: 2000px) {
+     #frame-home {
+        margin-top: 15%;
+        transform: scale(clamp(1, 1.6, 2));
+    }
+}
