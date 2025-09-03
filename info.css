@@ -602,6 +602,14 @@ nav {
         transform: scale(0.5);
         height: 120vw;
     }
+    #self-video video {
+        width: 60vw;
+        height: 60vw;
+        border: 2px solid var(--color-black);
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
 
     #tag {
         position: absolute;
